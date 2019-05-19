@@ -913,7 +913,7 @@
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
-		<string>0x07F</string>
+		<string>0x67</string>
 		<key>MLB</key>
 		<string>C02713401J9J0PG1H</string>
 		<key>ROM</key>
