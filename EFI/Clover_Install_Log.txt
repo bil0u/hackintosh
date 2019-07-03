@@ -1,41 +1,36 @@
 
-Clover EFI installer log - Sat Jun  1 16:02:16 CEST 2019
-Installer version: v2.4k r4934 EFI bootloader
+Clover EFI installer log - Tue Jul  2 18:05:28 CEST 2019
+Installer version: v2.4k r4972 EFI bootloader
 ======================================================
 /dev/disk0 (internal):
    #:                       TYPE NAME                    SIZE       IDENTIFIER
-   0:      GUID_partition_scheme                         1.0 TB     disk0
+   0:      GUID_partition_scheme                         512.1 GB   disk0
    1:                        EFI EFI                     209.7 MB   disk0s1
-   2:       Microsoft Basic Data Home                    1000.0 GB  disk0s2
+   2:                 Apple_APFS Container disk2         256.0 GB   disk0s2
+   3:         Microsoft Reserved                         16.8 MB    disk0s3
+   4:       Microsoft Basic Data Windows                 255.4 GB   disk0s4
+   5:           Windows Recovery                         522.2 MB   disk0s5
 
 /dev/disk1 (internal):
    #:                       TYPE NAME                    SIZE       IDENTIFIER
-   0:      GUID_partition_scheme                         512.1 GB   disk1
+   0:      GUID_partition_scheme                         1.0 TB     disk1
    1:                        EFI EFI                     209.7 MB   disk1s1
-   2:                 Apple_APFS Container disk2         256.0 GB   disk1s2
-   3:         Microsoft Reserved                         16.8 MB    disk1s3
-   4:       Microsoft Basic Data Windows                 255.9 GB   disk1s4
+   2:       Microsoft Basic Data Home                    1000.0 GB  disk1s2
 
 /dev/disk2 (synthesized):
    #:                       TYPE NAME                    SIZE       IDENTIFIER
    0:      APFS Container Scheme -                      +256.0 GB   disk2
-                                 Physical Store disk1s2
-   1:                APFS Volume Hackintosh SSD          146.7 GB   disk2s1
+                                 Physical Store disk0s2
+   1:                APFS Volume Hackintosh SSD          141.1 GB   disk2s1
    2:                APFS Volume Preboot                 24.3 MB    disk2s2
-   3:                APFS Volume Recovery                519.0 MB   disk2s3
+   3:                APFS Volume Recovery                519.5 MB   disk2s3
    4:                APFS Volume VM                      2.1 GB     disk2s4
 
-/dev/disk3 (disk image):
-   #:                       TYPE NAME                    SIZE       IDENTIFIER
-   0:      GUID_partition_scheme                        +15.9 TB    disk3
-   1:                        EFI EFI                     209.7 MB   disk3s1
-   2:                  Apple_HFS Copies de sauvegarde... 15.9 TB    disk3s2
-
-Target volume /Volumes/Hackintosh SSD on disk2 is APFS on physical store disk1s2
+Target volume /Volumes/Hackintosh SSD on disk2 is APFS on physical store disk0s2
 ======================================================
 Backing up EFI files
 
-Backing up /Volumes/Hackintosh SSD/EFIROOTDIR/EFI folder to /Volumes/Hackintosh SSD/EFI-Backups/r4920/2019-06-01-16h02/EFI
+Backing up /Volumes/Hackintosh SSD/EFIROOTDIR/EFI folder to /Volumes/Hackintosh SSD/EFI-Backups/r4934/2019-07-02-18h05/EFI
 ======================================================
 Installing BootSectors/BootLoader
 
