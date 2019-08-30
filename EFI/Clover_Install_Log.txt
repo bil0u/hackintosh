@@ -1,6 +1,6 @@
 
-Clover EFI installer log - Tue Jul  2 18:05:28 CEST 2019
-Installer version: v2.4k r4972 EFI bootloader
+Clover EFI installer log - Fri Aug 30 12:25:50 CEST 2019
+Installer version: v2.5k r5058 EFI bootloader
 ======================================================
 /dev/disk0 (internal):
    #:                       TYPE NAME                    SIZE       IDENTIFIER
@@ -21,16 +21,16 @@ Installer version: v2.4k r4972 EFI bootloader
    #:                       TYPE NAME                    SIZE       IDENTIFIER
    0:      APFS Container Scheme -                      +256.0 GB   disk2
                                  Physical Store disk0s2
-   1:                APFS Volume Hackintosh SSD          141.1 GB   disk2s1
+   1:                APFS Volume Hackintosh SSD          153.4 GB   disk2s1
    2:                APFS Volume Preboot                 24.3 MB    disk2s2
    3:                APFS Volume Recovery                519.5 MB   disk2s3
-   4:                APFS Volume VM                      2.1 GB     disk2s4
+   4:                APFS Volume VM                      20.5 KB    disk2s4
 
 Target volume /Volumes/Hackintosh SSD on disk2 is APFS on physical store disk0s2
 ======================================================
 Backing up EFI files
 
-Backing up /Volumes/Hackintosh SSD/EFIROOTDIR/EFI folder to /Volumes/Hackintosh SSD/EFI-Backups/r4934/2019-07-02-18h05/EFI
+Backing up /Volumes/Hackintosh SSD/EFIROOTDIR/EFI folder to /Volumes/Hackintosh SSD/EFI-Backups/r4972/2019-08-30-12h25/EFI
 ======================================================
 Installing BootSectors/BootLoader
 
