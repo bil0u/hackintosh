@@ -1,24 +1,42 @@
-## BIOS Settings
+### BIOS Settings
 
 Bios revision `F11c`. Optimized defaults + following settings :
 
-Key | Value
---- | ---
-**Tweaker** > **Extreme Memory Profile (X.M.P.)** | `Profile1`
-**Settings** > **Platform Power** > **Platform Power Management** | `Enabled`
-**Settings** > **Platform Power** > **DMI ASPM** | `Enabled`
-**Settings** > **Platform Power** > **ErP** | `Enabled`
-**Settings** > **IO Ports** > **Internal Graphics** | `Disabled`
-**Settings** > **IO Ports** > **USB Configuration** > **XHCI Hand-Off** | `Enabled`
-**Settings** > **IO Ports** > **USB Configuration** > **Port 60/40 Emulation** | `Enabled`
-**Settings** > **Miscellaneous** > **Trusted Computing** > **Security Device Support** | `Disable`
-**Boot** > **Windows 8/10 Features** | `Other OS`
-**Boot** > **CSM Support** | `Disabled`
-**Boot** > **Preferred Operating Mode** | `Advanced Mode`
+- **Tweaker**
+	- **Extreme Memory Profile (X.M.P.)** : `Profile1`
+	- **Advanced CPU Settings**
+		- **Hyper-Threading Technology** : `Enabled`
+		- **VT-d** : `Enabled`
+- **Settings**
+	- **IO Ports**
+		- **Internal Graphics** : `Enabled`
+		- **DVMT Pre-Allocated** : `64M`
+		- **DVMT total Gfx Mem** : `256M`
+		- **WiFi** : `Disabled`
+		- **Above 4g Decoding** : `Enabled`
+		- **USB Configuration**
+			- **XHCI Hand-Off** : `Enabled`
+		- **SATA And RST Configuration**
+			- **Sata Mode Selection** : `AHCI`
+	- **Miscellaneous**
+		- **Intel Platform Trust (PTT)** : `Disabled`
+		- **Software Guard Extensions (SGX)** : `Disabled`
+- **Boot**
+	- **Fast Boot** : `Disabled`
+	- **Windows 8/10 Features** : `Windows 8/10 WHQL`
+	- **CSM Support** : `Disabled`
+	- **Secure Boot**
+		- **Secure Boot Enable** : `Disabled`
 
 
-### Patched :
+#### Patched :
+
+The following values are manually patched as they do not appear in bios settings for this version
 
 Variable | Code | Value | Tool
 --- | --- | --- | ---
 **CFG Lock** | `0x5C1` | `0x0` | CFGLock.efi or ModGrubShell.efi
+
+> The following variables are missing for this bios version :
+> - **Execute Disable Bit**
+
