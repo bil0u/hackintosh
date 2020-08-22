@@ -31,7 +31,9 @@ Bios revision `F11c`. Optimized defaults + following settings :
 
 #### Patched :
 
-The following values are manually patched as they do not appear in bios settings for this version
+The following values are manually patched as they do not appear in bios settings for this version.
+
+**The variables must be patched after each BIOS settings update**
 
 Variable | Code | Value | Tool
 --- | --- | --- | ---

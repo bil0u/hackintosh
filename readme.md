@@ -1,6 +1,6 @@
 ## OpenCore Hackintosh
 
-On this repo you will find the configuration of my Coffee Lake hackintosh that i use everydayfor working and gaming.
+On this repo you will find the configuration of my Coffee Lake hackintosh that i use everyday for working and gaming.
 
 It's running an **Intel 9900K** CPU on the **Z390 Aorus Master**
 
