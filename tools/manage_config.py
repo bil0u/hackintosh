@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import os
 import json
 import plistlib
@@ -14,28 +15,23 @@ SECRETS = {
 }
 
 
-def file_required(file):
-	""" Stops the script if the file does not exists """
-	if not os.path.exists(file):
-		print(f'{file} does not exists')
-		exit(1)
+def _file_exists(filepath):
+	if not os.path.isfile(filepath):
+		msg = '\'%s\' does not exists' % filepath
+		raise argparse.ArgumentTypeError(msg)
+	return filepath
 
 
-def backup_secrets():
+def backup_secrets(config_file: str, backup_file: str):
 	""" Backup the configuration file secrets """
 
-	file_required(CONFIG_FILE)
-
 	backup = SECRETS.copy()
-
-	with open(CONFIG_FILE, 'rb') as cfg, open(BACKUP_FILE, 'w') as bkp:
+	with open(config_file, 'rb') as cfg, open(backup_file, 'w') as bkp:
 
 		config = plistlib.load(cfg)['PlatformInfo']['Generic']
-
 		for key in SECRETS:
-
 			if config[key] == SECRETS[key]:
-				exit(1)
+				return
 			if type(config[key]) is bytes:
 				backup[key] = config[key].hex()
 			else:
@@ -43,16 +39,14 @@ def backup_secrets():
 
 		json.dump(backup, bkp)
 
-		print(f'Secrets from \'{CONFIG_FILE}\' successfuly saved to \'{BACKUP_FILE}\'')
+		print(f'Secrets from \'{config_file}\' successfully saved to \'{backup_file}\'')
 
 
-def clean_config():
+def clean_config(config_file: str, backup_file: str):
 	""" Remove secrets from the configuration file to safely publish it on the web """
 
-	file_required(CONFIG_FILE)
-
-	if not os.path.exists(BACKUP_FILE):
-		backup_secrets()
+	if not os.path.exists(backup_file):
+		backup_secrets(config_file, backup_file)
 
 	config = None
 
@@ -70,15 +64,15 @@ def clean_config():
 	print(f'\'{CONFIG_FILE}\' cleaned !')
 
 
-def restore_config():
+def restore_config(config_file: str, backup_file: str):
 	""" Clean a configuration file to safely publish it on internet """
-
-	file_required(CONFIG_FILE)
-	file_required(BACKUP_FILE)
 
 	config = None
 
-	with open(CONFIG_FILE, 'rb') as cfg, open(BACKUP_FILE, 'rb') as bkp:
+	if not os.path.exists(backup_file):
+		print('There\'s no backup file to use. Make sure you have run \'backup\' command before')
+
+	with open(config_file, 'rb') as cfg, open(backup_file, 'rb') as bkp:
 
 		backup = json.load(bkp)
 		config = plistlib.load(cfg)
@@ -90,7 +84,25 @@ def restore_config():
 			else:
 				infos[key] = backup[key]
 
-	with open(CONFIG_FILE, 'wb') as cfg:
+	with open(config_file, 'wb') as cfg:
 		plistlib.dump(config, cfg)
 
-	print(f'\'{CONFIG_FILE}\' restored !')
+	print(f'\'{config_file}\' restored !')
+
+
+if __name__ == '__main__':
+	parser = argparse.ArgumentParser(description='Manage OpenCore configuration secrets')
+	parser.add_argument('command', type=str, choices=['backup', 'clean', 'restore'],
+						help='command to execute. clean makes also a backup')
+	parser.add_argument('-c', '--config', type=_file_exists, default=CONFIG_FILE,
+						help='target config file')
+	parser.add_argument('-b', '--backup', type=str, default=BACKUP_FILE,
+						help='backup file destination. we recommend to put a .json extension')
+	args = parser.parse_args()
+
+	if args.command == 'backup':
+		backup_secrets(args.config, args.backup)
+	elif args.command == 'clean':
+		clean_config(args.config, args.backup)
+	else:
+		restore_config(args.config, args.backup)

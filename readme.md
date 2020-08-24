@@ -13,9 +13,46 @@ You can find the install guide [here](https://dortania.github.io/OpenCore-Instal
 
 ### Configuration
 
-I'm currently running **macOS 10.13.6 build 17G14019** vanilla with `iMac18,3` SMBIOS.
+I'm currently running **macOS 10.13.6 build 17G14019** vanilla with `iMac18,3` SMBIOS and Windows 10 on the same drive.
 
-Have a look at my [hardware](/hardware.md), [bios settings](/bios_settings.md), and [config](/config.md) !
+Have a look at my [hardware](/hardware.md), [bios settings](/bios_settings.md), [config](/config.md), and [notes](/notes.md) !
+
+### Tools
+
+I added some custom tools:
+- [manage_config](/tools/manage_config.py) : useful for clear secrets in your config.plist before adding it to version control.  
+    ```shell script
+    usage: python3 tools/manage_config.py [-h] [-c CONFIG] [-b BACKUP] {backup,clean,restore}
+
+    Manage OpenCore configuration secrets
+
+    positional arguments:
+      {backup,clean,restore}
+                        command to execute. clean makes also a backup
+
+    optional arguments:
+      -h, --help        show this help message and exit
+      -c CONFIG, --config CONFIG
+                        target configuration
+      -b BACKUP, --backup BACKUP
+                        backup file destination. we recommend to put a .json extension
+    ```
+  
+- [custom_atm](/tools/custom_atm.py): customizes the 'About this Mac' panel. 
+    ```shell script
+    usage: python3 tools/custom_atm.py [-h] [--system-logo SYSTEM_LOGO] [--model-name MODEL_NAME] [--processor-name PROCESSOR_NAME]
+
+    Customizes 'About this Mac' section of a macOS system
+
+    optional arguments:
+      -h, --help        show this help message and exit
+      --system-logo SYSTEM_LOGO
+                        system logo to use. logo format must be TIFF
+      --model-name MODEL_NAME
+                        custom model name
+      --processor-name PROCESSOR_NAME
+                        custom processor name
+    ```  
 
 
 ### What's working
