@@ -1,6 +1,6 @@
 ## Configuration
 
-This is my configuration for OpenCore 0.6.0 release version (everyday use)
+This is my configuration for OpenCore 0.6.0 debug version (for install and tests)
 
 #### ACPI
 
@@ -26,7 +26,6 @@ This is my configuration for OpenCore 0.6.0 release version (everyday use)
 → Location : `EFI/OC/Drivers/`
 
 - `HFSPlus.efi`
-- `OpenCanopy.efi`
 - `OpenRuntime.efi`
 
 
@@ -52,9 +51,7 @@ VirtualSMC + sensors : <br> <li>SMCProcessor</li><li>SMCSuperIO</li> | 1.1.5
 
 #### Graphics
 
-> Apple stopped NVIDIA support since macOS 10.14, so i'm stuck on High Sierra until i upgrade to an AMD GPU
-
-**NVIDIA Web Driver** version 387.10.10.10.40.138, display connected via DVI-D
+No graphics driver
 
 
 #### config.plist
@@ -107,13 +104,13 @@ For full details, see the config file [here](/EFI/OC/config.plist)
 	- #### Misc
 		- ##### Boot
 			- **HibernateMode** [String] : `None`
-			- **PickerAttributes** [Number] : `1`
-			- **PickerMode** [String] : `External`
+			- **PickerAttributes** [Number] : `0`
+			- **PickerMode** [String] : `Builtin`
 		- ##### Debug
-			- **AppleDebug** [Boolean] : `False`
-			- **ApplePanic** [Boolean] : `False`
-			- **DisableWatchDog** [Boolean] : `False`
-			- **Target** [Number] : `3`
+			- **AppleDebug** [Boolean] : `True`
+			- **ApplePanic** [Boolean] : `True`
+			- **DisableWatchDog** [Boolean] : `True`
+			- **Target** [Number] : `67`
 		- ##### Security
 			- **AllowNvramReset** [Boolean] : `True`
 			- **AllowSetDefault** [Boolean] : `True`
@@ -121,7 +118,10 @@ For full details, see the config file [here](/EFI/OC/config.plist)
 			- **Vault** [String] : `Optional`
 			- **ScanPolicy** [Number] : `0`
 		- ##### Tools
+			- **CFGLock**
+			- **MmapDump**
 			- **OpenShell**
+			- **VerifyMsrE2**
 	- #### NVRAM
 		- **WriteFlash** [Boolean] : `True`
 		- ##### Add
@@ -131,7 +131,7 @@ For full details, see the config file [here](/EFI/OC/config.plist)
 			- **4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102**
 				- **rtc-blacklist** [Data] : `<>`
 			- **7C436110-AB2A-4BBB-A880-FE41995C9F82**
-				- **boot-args** [String] : `debug=0x100 keepsyms=1 nvda_drv_vrl=1`
+				- **boot-args** [String] : `-v debug=0x100 keepsyms=1`
 				- **csr-active-config** [Data] : `<00000000>`
 				- **prev-lang:kbd** [String] : `en-US:0`
 	- #### PlatformInfo
@@ -145,5 +145,4 @@ For full details, see the config file [here](/EFI/OC/config.plist)
 		- **ConnectDrivers** [Boolean] : `True`
 		- ##### Drivers
 			- **HfsPlus**
-			- **OpenCanopy**
 			- **OpenRuntime**

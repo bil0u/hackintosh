@@ -6,7 +6,7 @@ It's running an **Intel 9900K** CPU on the **Z390 Aorus Master**
 
 ### Bootloader
 
-This hackintosh runs on [OpenCore v0.6.0 release](https://github.com/acidanthera/OpenCorePkg) from [acidanthera](https://github.com/acidanthera)
+This hackintosh runs on [OpenCore v0.6.0 debug](https://github.com/acidanthera/OpenCorePkg) from [acidanthera](https://github.com/acidanthera)
 
 You can find the install guide [here](https://dortania.github.io/OpenCore-Install-Guide)
 
