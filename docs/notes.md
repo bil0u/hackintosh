@@ -60,10 +60,9 @@ Don't panic, just try this :
 4. Reboot your computer and voilà, you should be OK now !
 
 
-(#audio-crackles-issue)
-#### Audio crackles, stop and/or desynchronizes on macOS
+#### macOS Audio issues
 
-Even with `AppleALC.kext` and `layout-id=16` i had somes issues with the sound.
+Audio crackles, stop and/or desynchronizes on macOS, even with `AppleALC.kext` and `layout-id=16`.
 
 This fix worked for me :
 
