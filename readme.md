@@ -88,7 +88,7 @@ I added some custom tools:
 	- [x] Fix CPU power management
 	- [x] Map USB
 	- [x] Fix sleep/wake
-	- [x] Fix audio cracklings/stop/desync (I finally managed to get it work with [these steps](/docs/notes.md#audio-crackles-issue))
+	- [x] Fix audio cracklings/stop/desync (I finally managed to get it work with [these steps](/docs/notes.md####-macos-audio-issues))
 
 
 - **Short term** :
