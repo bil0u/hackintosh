@@ -15,12 +15,12 @@ You can find the install guide [here](https://dortania.github.io/OpenCore-Instal
 
 I'm currently running **macOS 10.13.6 build 17G14019** vanilla with `iMac18,3` SMBIOS and Windows 10 on the same drive.
 
-Have a look at my [hardware](/hardware.md), [bios settings](/bios_settings.md), [config](/config.md), and [notes](/notes.md) !
+Have a look at my [hardware](/docs/hardware.md), [bios settings](/docs/bios_settings.md), [config](/docs/config.md), and [notes](/docs/notes.md) !
 
 ### Tools
 
 I added some custom tools:
-- [manage_config](/tools/manage_config.py) : useful for clear secrets in your config.plist before adding it to version control.  
+- [manage_config](/tools/manage_config.py) : useful for clear secrets in your config.plist before adding it to version control.
     ```shell script
     usage: python3 tools/manage_config.py [-h] [-c CONFIG] [-b BACKUP] {backup,clean,restore}
 
@@ -37,8 +37,8 @@ I added some custom tools:
       -b BACKUP, --backup BACKUP
                         backup file destination. we recommend to put a .json extension
     ```
-  
-- [custom_atm](/tools/custom_atm.py): customizes the 'About this Mac' panel. 
+
+- [custom_atm](/tools/custom_atm.py): customizes the 'About this Mac' panel.
     ```shell script
     usage: python3 tools/custom_atm.py [-h] [--system-logo SYSTEM_LOGO] [--model-name MODEL_NAME] [--processor-name PROCESSOR_NAME]
 
@@ -52,7 +52,7 @@ I added some custom tools:
                         custom model name
       --processor-name PROCESSOR_NAME
                         custom processor name
-    ```  
+    ```
 
 
 ### What's working
@@ -68,12 +68,13 @@ I added some custom tools:
 - [x] AirPlay
 - [x] Power Nap
 - [x] NVRAM
+- [x] Perfect sound quality
+- [x] Sleep/Wake
 - [ ] Bluetooth (via Broadcom BCM94360CD + USB connection via internal adapter)
 	- Airdrop
 	- Handoff
 	- Continuity
-- [ ] Sleep/Wake
-- [ ] Perfect sound quality
+
 
 ### Tasks :
 
@@ -86,12 +87,12 @@ I added some custom tools:
 	- [x] Fix System clocks
 	- [x] Fix CPU power management
 	- [x] Map USB
+	- [x] Fix sleep/wake
+	- [x] Fix audio cracklings/stop/desync (I finally managed to get it work with [these steps](/docs/notes.md#audio-crackles-issue))
 
 
 - **Short term** :
 
-	- [ ] Fix sleep/wake
-	- [ ] Fix audio cracklings/sync
 	- [ ] Enable iGPU full acceleration
 	- [ ] Overclock CPU @ 5.0 GHz
 	- [ ] Fix bluetooth issues (maybe buy a BCM943602CDP card ?)
