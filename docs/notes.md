@@ -1,19 +1,9 @@
 ### Notes
 
-Here you will find some personal notes about my post install preferences and some problems i encountered and the steps i followed to solve them.
+Here you will find some personal notes about some problems i encountered and the steps i followed to solve them.
 
 
-#### Post-install memo
-
-###### On macOS
-- Customize About this Mac with [custom_atm](/tools/custom_atm.py) script
-
-###### On Windows
-- Run custom [registry editors](/resources/regedits)
-- Install DirectX components, link [here](https://www.microsoft.com/fr-fr/download/details.aspx?id=35)
-
-
-#### Windows Installation issues
+#### Windows Installation
 
 I choosed to install OpenCore, macOS and Windows on the same drive.
 
@@ -35,6 +25,7 @@ I first installed macOS and OpenCore, then Windows.
 5. On the disk selection menu, select the exFat partition you created before and delete it. Then, select the ` unused space` and continue the install. **DO NOT** create a partition but only select the unused space you created by removing the partition.
 
 6. The install should work properly now ! If not, Google is your friend :) What worked for me could not work for you.
+
 
 #### Secondary drive(s) does not appear in Windows Explorer
 
@@ -67,3 +58,17 @@ Don't panic, just try this :
 
 
 4. Reboot your computer and voilà, you should be OK now !
+
+
+(#audio-crackles-issue)
+#### Audio crackles, stop and/or desynchronizes on macOS
+
+Even with `AppleALC.kext` and `layout-id=16` i had somes issues with the sound.
+
+This fix worked for me :
+
+- Open `Audio MIDI Setup.app` located under `/Applications/Utilities`
+- Select your sound output on the left panel
+- Under `Format (Bitrate)`, try all values starting from the biggest value (the lower one in the list)
+
+My preset : `2-channel 32-bit 96.0kHz floating point number`

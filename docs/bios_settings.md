@@ -21,6 +21,13 @@ Bios revision `F11c`. Optimized defaults + following settings :
 	- **Miscellaneous**
 		- **Intel Platform Trust (PTT)** : `Disabled`
 		- **Software Guard Extensions (SGX)** : `Disabled`
+	- **Smart Fan 5**
+		- **CPU OPT**
+			- **Fan Speed Control** : `Full Speed`
+			- **Fan Control Mode** : `Voltage`
+		- **System FAN 2**
+			- **Fan Speed Control** : `Manual`
+			- **Fan Control Mode** : `PWM`
 - **Boot**
 	- **Fast Boot** : `Disabled`
 	- **Windows 8/10 Features** : `Windows 8/10 WHQL`
