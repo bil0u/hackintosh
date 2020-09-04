@@ -71,3 +71,8 @@ This fix worked for me :
 - Under `Format (Bitrate)`, try all values starting from the biggest value (the lower one in the list)
 
 My preset : `2-channel 32-bit 96.0kHz floating point number`
+
+
+#### LED/fans stays on when computer is off
+
+Fix: Enable `ErP` in BIOS

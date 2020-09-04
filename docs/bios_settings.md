@@ -8,6 +8,8 @@ Bios revision `F11c`. Optimized defaults + following settings :
 		- **Hyper-Threading Technology** : `Enabled`
 		- **VT-d** : `Enabled`
 - **Settings**
+	- **Platform Power**
+		- **ErP** : `Enabled`
 	- **IO Ports**
 		- **Internal Graphics** : `Enabled`
 		- **DVMT Pre-Allocated** : `64M`
