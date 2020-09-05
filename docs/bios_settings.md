@@ -1,4 +1,4 @@
-### BIOS Settings
+# BIOS Settings
 
 Bios revision `F11c`. Optimized defaults + following settings :
 
@@ -14,7 +14,7 @@ Bios revision `F11c`. Optimized defaults + following settings :
 		- **Internal Graphics** : `Enabled`
 		- **DVMT Pre-Allocated** : `64M`
 		- **DVMT total Gfx Mem** : `256M`
-		- **WiFi** : `Disabled`
+		- **WiFi** : `Enabled`
 		- **Above 4g Decoding** : `Enabled`
 		- **USB Configuration**
 			- **XHCI Hand-Off** : `Enabled`
@@ -38,16 +38,15 @@ Bios revision `F11c`. Optimized defaults + following settings :
 		- **Secure Boot Enable** : `Disabled`
 
 
-#### Patched :
+## Patches
 
 The following values are manually patched as they do not appear in bios settings for this version.
 
-**The variables must be patched after each BIOS settings update**
+> **IMPORTANT** : The variables must be patched after each BIOS settings update !
 
 Variable | Code | Value | Tool
 --- | --- | --- | ---
 **CFG Lock** | `0x5C1` | `0x0` | CFGLock.efi or ModGrubShell.efi
 
-> The following variables are missing for this bios version :
-> - **Execute Disable Bit**
-
+**The following variables are missing for this bios version :**
+- **Execute Disable Bit**

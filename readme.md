@@ -1,25 +1,33 @@
-## OpenCore Hackintosh
+# Coffee-Lake Hackintosh
 
-On this repo you will find the configuration of my Coffee Lake hackintosh that i use everyday for working and gaming.
+On this repo you will find the configuration of my hackintosh that i use everyday for working and gaming.
 
-It's running an **Intel 9900K** CPU on the **Z390 Aorus Master**
+It's been a long journey since the purchase of the components fixing bugs and testing different bootloaders, but it runs incredibly smooth now, and i'm so much happy with it.
 
-### Bootloader
+## Bootloader
 
-This hackintosh runs on [OpenCore v0.6.0 release](https://github.com/acidanthera/OpenCorePkg) from [acidanthera](https://github.com/acidanthera)
+This hackintosh runs on [OpenCore v0.6.0 release](https://github.com/acidanthera/OpenCorePkg) from [acidanthera](https://github.com/acidanthera).
+> I was previously using Clover, never again !
 
-You can find the install guide [here](https://dortania.github.io/OpenCore-Install-Guide)
 
+## Configuration
 
-### Configuration
+I'm currently running **macOS 10.13.6 build 17G14019** vanilla and **Windows 10** on the same drive.
 
-I'm currently running **macOS 10.13.6 build 17G14019** vanilla with `iMac18,3` SMBIOS and Windows 10 on the same drive.
+Quick hardware tour :  **Intel Core i9 9900-K** & **NVIDIA GeForce GTX 1080 Ti** on the **Gigabyte Z390 Aorus Master**.  
+*→ Full hardware list [here](/docs/hardware.md)*
 
-Have a look at my [hardware](/docs/hardware.md), [bios settings](/docs/bios_settings.md), [config](/docs/config.md), and [notes](/docs/notes.md) !
+I followed these install steps :
 
-### Tools
+1. **macOS + OpenCore** : official dortania [install guide](https://dortania.github.io/OpenCore-Install-Guide).
+2. **Windows 10** : the steps described [here](/docs/windows_install.md)
 
-I added some custom tools:
+Have a look at the [bios settings](/docs/bios_settings.md) and [config](/docs/config.md) I use.
+
+## Tools
+
+I built some useful tools, feel free to use them :
+
 - [manage_config](/tools/manage_config.py) : useful for clear secrets in your config.plist before adding it to version control.
     ```shell script
     usage: python3 tools/manage_config.py [-h] [-c CONFIG] [-b BACKUP] {backup,clean,restore}
@@ -55,25 +63,17 @@ I added some custom tools:
     ```
 
 
-### What's working
+## Achievements
 
 - [x] Ethernet
-- [x] Wi-Fi (via Broadcom BCM94360CD + PCIe connection via internal adapter)
+- [x] Wi-Fi + Bluetooth (via On-board Intel Wireless AC 9560)
 - [x] Onboard Audio (including digital audio)
-- [x] APFS
 - [x] All USB ports at full 3.x speed
-- [x] iMessage
-- [x] App Store
-- [x] Facetime
-- [x] AirPlay
+- [x] APFS
+- [x] iCloud, iMessage, AppStore, FaceTime, AirPlay
 - [x] Power Nap
 - [x] NVRAM
-- [x] Perfect sound quality
 - [x] Sleep/Wake
-- [ ] Bluetooth (via Broadcom BCM94360CD + USB connection via internal adapter)
-	- Airdrop
-	- Handoff
-	- Continuity
 
 
 ### Tasks :
@@ -88,14 +88,16 @@ I added some custom tools:
 	- [x] Fix CPU power management
 	- [x] Map USB
 	- [x] Fix sleep/wake
-	- [x] Fix audio cracklings/stop/desync (I finally managed to get it work with [these steps](/docs/notes.md#-macos-audio-issues))
+	- [x] Fix audio cracklings/stop/desync ([notes](/docs/issues.md))
+	- [x] Fix Bluetooth
+	- [x] Fix Magic Keyboard pairing issue when switching OS ([notes](/docs/issues.md))
 
 
 - **Short term** :
 
 	- [ ] Enable iGPU full acceleration
 	- [ ] Overclock CPU @ 5.0 GHz
-	- [ ] Fix bluetooth issues (maybe buy a BCM943602CDP card ?)
+	- [ ] Buy a native/supported wireless card (Maybe a BCM943602CDP ?)
 
 
 - **Long term** :
