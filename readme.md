@@ -6,7 +6,7 @@ It's been a long journey since the purchase of the components fixing bugs and te
 
 ## Bootloader
 
-This hackintosh runs on [OpenCore v0.6.0 release](https://github.com/acidanthera/OpenCorePkg) from [acidanthera](https://github.com/acidanthera).
+This hackintosh runs on [OpenCore v0.6.5 release](https://github.com/acidanthera/OpenCorePkg) from [acidanthera](https://github.com/acidanthera).
 > I was previously using Clover, never again !
 
 
