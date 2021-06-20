@@ -24,6 +24,8 @@ I followed these install steps :
 
 Have a look at the [bios settings](/docs/bios_settings.md) and [config](/docs/config.md) I use.
 
+I wrote an update memo, you can see it [here](/docs/update.md)
+
 ## Tools
 
 I built some useful tools, feel free to use them :
