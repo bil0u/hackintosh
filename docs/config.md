@@ -11,7 +11,9 @@ This is my configuration for OpenCore 0.6.0 release version (everyday use)
 → Location : `EFI/OC/ACPI/`
 
 - `SSDT-AWAC.aml`
+- `SSDT-BRG0.aml`
 - `SSDT-EC-USBX.aml`
+- `SSDT-GPRW.aml`
 - `SSDT-PLUG.aml`
 - `SSDT-PMC.aml`
 - `SSDT-SBUS-MCHC.aml`
@@ -24,6 +26,7 @@ This is my configuration for OpenCore 0.6.0 release version (everyday use)
 → Location : `EFI/OC/Drivers/`
 
 - `HFSPlus.efi`
+- `NvmExpressDxe.efi`
 - `OpenCanopy.efi`
 - `OpenRuntime.efi`
 
@@ -36,21 +39,19 @@ This is my configuration for OpenCore 0.6.0 release version (everyday use)
 
 | Kext                                                                 | Version |
 | -------------------------------------------------------------------- | ------- |
-| AppleALC                                                             | 1.5.1   |
-| IntelMausi                                                           | 1.0.3   |
-| Lilu                                                                 | 1.4.6   |
-| WhateverGreen                                                        | 1.4.1   |
-| USBMap                                                               | Custom  |
-| XHCI-unsupported                                                     | 0.9.2   |
-| VirtualSMC + sensors : <br> <li>SMCProcessor</li><li>SMCSuperIO</li> | 1.1.5   |
+| AppleALC                                                             | 1.6.8   |
+| IntelBluetoothFirmware                                               | 2.1.0   |
+| IntelBluetoothInjector                                               | 2.1.0   |
+| IntelMausi                                                           | 1.0.7   |
+| itlwm                                                                | 2.1.0   |
+| Lilu                                                                 | 1.5.9   |
+| NVMeFix                                                              | 1.0.9   |
+| RestrictEvents                                                       | 1.0.6   |
+| WhateverGreen                                                        | 1.5.6   |
+| USBPower                                                             | Custom  |
+| VirtualSMC + sensors : <br> <li>SMCProcessor</li><li>SMCSuperIO</li> | 1.2.8   |
 
-> Note : USBMap.kext is a custom kext for Z390 Aorus Master + Phanteks Evolv X as i use the front panel USB3 and USB-C. You should build your own
-
-#### Graphics
-
-> Apple stopped NVIDIA support since macOS 10.14, so i'm stuck on High Sierra until i upgrade to an AMD GPU
-
-**NVIDIA Web Driver** version 387.10.10.10.40.138, display connected via DVI-D
+> Note : USBPower.kext is a custom kext for Z390 Aorus Master + Phanteks Evolv X as i use the front panel USB3 and USB-C. You should build your own
 
 #### config.plist
 
@@ -60,10 +61,16 @@ This is my configuration for OpenCore 0.6.0 release version (everyday use)
 For full details, see the config file [here](/EFI/OC/config.plist)
 
 - ### Root
+
+  > ⚠️ Not up to date ⚠️
+  > _Does not reflect yet the current config_
+
   - #### ACPI
     - ##### Add
       - **SSDT-AWAC**
+      - **SSDT-BRG0**
       - **SSDT-EC-USBX**
+      - **SSDT-GPRW**
       - **SSDT-PLUG**
       - **SSDT-PMC**
       - **SSDT-SBUS-MCHC**
@@ -130,4 +137,3 @@ For full details, see the config file [here](/EFI/OC/config.plist)
         - **csr-active-config** [Data] : `<00000000>`
         - **prev-lang:kbd** [String] : `en-US:0`
   - #### PlatformInfo
-   
