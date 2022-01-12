@@ -6,25 +6,31 @@ It's been a long journey since the purchase of the components fixing bugs and te
 
 ## Bootloader
 
-This hackintosh runs on [OpenCore v0.7.5 release](https://github.com/acidanthera/OpenCorePkg) from [acidanthera](https://github.com/acidanthera).
+This hackintosh runs on [OpenCore v0.7.7 release](https://github.com/acidanthera/OpenCorePkg) from [acidanthera](https://github.com/acidanthera).
 
 > I was previously using Clover, never again !
 
 ## Configuration
 
-I'm currently running **macOS 10.13.6 build 17G14019** vanilla and **Windows 10** on the same drive.
+I'm currently running **macOS 11.6.2 build 20G314** vanilla and **Windows 10** on the same drive.
 
-Quick hardware tour : **Intel Core i9 9900-K** & **NVIDIA GeForce GTX 1080 Ti** on the **Gigabyte Z390 Aorus Master**.  
-_→ Full hardware list [here](/docs/hardware.md)_
+Quick hardware tour : **Intel Core i9 9900K** & **AMD Radeon 6900XT** running on the **Gigabyte Z390 Aorus Master**.  
+_→ [Full hardware list](/docs/hardware.md)_
 
 I followed these install steps :
 
 1. **macOS + OpenCore** : official dortania [install guide](https://dortania.github.io/OpenCore-Install-Guide).
 2. **Windows 10** : the steps described [here](/docs/windows_install.md)
 
-Have a look at the [bios settings](/docs/bios_settings.md) and [config](/docs/config.md) I use.
+## Docs
 
-I wrote an update memo, you can see it [here](/docs/update.md)
+- [Hardware](/docs/hardware.md)
+- [Bios settings](/docs/bios_settings.md)
+- [Config](/docs/config.md)
+- [Issues](/docs/issues.md)
+- [Post Install](/docs/post_install.md)
+- [Update](/docs/update.md)
+- [Windows Install](/docs/windows_install.md)
 
 ## Tools
 
@@ -77,29 +83,4 @@ I built some useful tools, feel free to use them :
 - [x] Power Nap
 - [x] NVRAM
 - [x] Sleep/Wake
-
-### Tasks :
-
-- **Done** :
-
-  - [x] Patch CFG Lock
-  - [x] Fix NVRAM
-  - [x] Fix EC and USBX
-  - [x] Fix System clocks
-  - [x] Fix CPU power management
-  - [x] Map USB
-  - [x] Fix sleep/wake
-  - [x] Fix audio cracklings/stop/desync ([notes](/docs/issues.md))
-  - [x] Fix Bluetooth
-  - [x] Fix Magic Keyboard pairing issue when switching OS ([notes](/docs/issues.md))
-
-- **Short term** :
-
-  - [ ] Enable iGPU full acceleration
-  - [ ] Overclock CPU @ 5.0 GHz
-  - [ ] Buy a native/supported wireless card (Maybe a BCM943602CDP ?)
-
-- **Long term** :
-
-  - [ ] Upgrade GPU to an AMD
-  - [ ] Update to macOS 11
+- [x] Hardware acceleration

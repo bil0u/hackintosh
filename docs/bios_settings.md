@@ -31,22 +31,9 @@ Bios revision `F11c`. Optimized defaults + following settings :
       - **Fan Speed Control** : `Manual`
       - **Fan Control Mode** : `PWM`
 - **Boot**
+  - **CFG Lock** : `Disabled`
   - **Fast Boot** : `Disabled`
-  - **Windows 8/10 Features** : `Windows 8/10 WHQL`
+  - **Windows 8/10 Features** : `Windows 8/10`
   - **CSM Support** : `Disabled`
   - **Secure Boot**
     - **Secure Boot Enable** : `Disabled`
-
-## Patches
-
-The following values are manually patched as they do not appear in bios settings for this version.
-
-> **IMPORTANT** : The variables must be patched after each BIOS settings update !
-
-| Variable     | Code    | Value | Tool                            |
-| ------------ | ------- | ----- | ------------------------------- |
-| **CFG Lock** | `0x5C1` | `0x0` | CFGLock.efi or ModGrubShell.efi |
-
-**The following variables are missing for this bios version :**
-
-- **Execute Disable Bit**
