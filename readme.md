@@ -12,10 +12,9 @@ This hackintosh runs on [OpenCore v0.7.7 release](https://github.com/acidanthera
 
 ## Configuration
 
-I'm currently running **macOS 11.6.2 build 20G314** vanilla and **Windows 10** on the same drive.
+I'm currently running **macOS 11.6.2 build 20G314** vanilla under SMBIOS `iMac19,1` and **Windows 10** on the same drive.
 
-Quick hardware tour : **Intel Core i9 9900K** & **AMD Radeon 6900XT** running on the **Gigabyte Z390 Aorus Master**.  
-_→ [Full hardware list](/docs/hardware.md)_
+Quick hardware tour : **Intel Core i9 9900K** & **AMD Radeon 6900XT** running on the **Gigabyte Z390 Aorus Master**.
 
 I followed these install steps :
 

@@ -1,6 +1,7 @@
 # BIOS Settings
 
-Bios revision `F11c`. Optimized defaults + following settings :
+Bios revision `F11`.
+**Optimized defaults** + following settings :
 
 - **Tweaker**
   - **Extreme Memory Profile (X.M.P.)** : `Profile1`
@@ -13,9 +14,12 @@ Bios revision `F11c`. Optimized defaults + following settings :
   - **IO Ports**
     - **Internal Graphics** : `Enabled`
     - **DVMT Pre-Allocated** : `64M`
-    - **DVMT total Gfx Mem** : `256M`
+    - **DVMT total Gfx Mem** : `MAX`
     - **WiFi** : `Enabled`
     - **Above 4g Decoding** : `Enabled`
+    - **Resize BAR Support** : `Auto`
+    - **Super I/O**
+      - **Serial Port** : `Disabled`
     - **USB Configuration**
       - **XHCI Hand-Off** : `Enabled`
     - **SATA And RST Configuration**

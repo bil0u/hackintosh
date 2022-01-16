@@ -46,10 +46,12 @@
 
 ### Kexts
 
-- [Lilu](https://github.com/acidanthera/lilu/releases)
-- [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases)
 - [AppleALC](https://github.com/acidanthera/applealc/releases)
-- [IntelMausi](https://github.com/acidanthera/IntelMausi/releases)
-- [VirtualSMC](https://github.com/acidanthera/virtualsmc/releases)
+- [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/intelbluetoothfirmware/releases)
+- [IntelMausi](https://github.com/acidanthera/intelmausi/releases)
 - [itlwm](https://github.com/OpenIntelWireless/itlwm/releases)
-- [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases)
+- [Lilu](https://github.com/acidanthera/lilu/releases)
+- [NVMeFix](https://github.com/acidanthera/nvmefix/releases)
+- [RestrictEvents](https://github.com/acidanthera/restrictevents/releases)
+- [VirtualSMC](https://github.com/acidanthera/virtualsmc/releases)
+- [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases)
