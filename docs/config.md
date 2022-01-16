@@ -1,6 +1,6 @@
 ## Configuration
 
-This is my configuration for OpenCore 0.7.7 release version (everyday use)
+This is my configuration for OpenCore 0.7.7 release version (everyday use).
 
 > See the sample config.plist provided in [OpenCore documentation](https://github.com/acidanthera/OpenCorePkg/tree/master/Docs)
 
