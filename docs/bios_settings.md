@@ -18,7 +18,7 @@ Bios revision `F11`.
     - **WiFi** : `Enabled`
     - **Above 4g Decoding** : `Enabled`
     - **Resize BAR Support** : `Auto`
-    - **Super I/O**
+    - **Super IO Configuration**
       - **Serial Port** : `Disabled`
     - **USB Configuration**
       - **XHCI Hand-Off** : `Enabled`
